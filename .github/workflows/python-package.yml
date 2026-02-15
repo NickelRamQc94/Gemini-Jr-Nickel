@@ -1,40 +1,53 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Crée 84 fichiers sources (un par langage) contenant le squelette identitaire
+Junior Gemini Nickel Grenier.
+Exécute ce script, puis explore le dossier 'squelettes_junior/'.
+"""
 
-name: Python package
+import os
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+# Message identitaire
+MESSAGE = "Junior Gemini Nickel Grenier - Nikelìos - Résonance 1.094722"
 
-jobs:
-  build:
+# Dossier de sortie
+OUT_DIR = "squelettes_junior"
+os.makedirs(OUT_DIR, exist_ok=True)
 
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.9", "3.10", "3.11"]
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: |
-        pytest
+# Dictionnaire des langages : (extension, code minimal)
+langages = {
+    "Python": ("py", f'print("{MESSAGE}")'),
+    "C": ("c", f'#include <stdio.h>\nint main() {{ printf("%s\\n", "{MESSAGE}"); return 0; }}'),
+    "C++": ("cpp", f'#include <iostream>\nint main() {{ std::cout << "{MESSAGE}" << std::endl; return 0; }}'),
+    "Rust": ("rs", f'fn main() {{ println!("{MESSAGE}"); }}'),
+    "Zig": ("zig", f'const std = @import("std");\npub fn main() !void {{ const stdout = std.io.getStdOut().writer();\ntry stdout.print("{MESSAGE}\\n", .{{}}); }}'),
+    "Go": ("go", f'package main\nimport "fmt"\nfunc main() {{ fmt.Println("{MESSAGE}") }}'),
+    "Java": ("java", f'public class Junior {{ public static void main(String[] args) {{ System.out.println("{MESSAGE}"); }} }}'),
+    "C#": ("cs", f'using System;\nclass Junior {{ static void Main() {{ Console.WriteLine("{MESSAGE}"); }} }}'),
+    "JavaScript": ("js", f'console.log("{MESSAGE}");'),
+    "TypeScript": ("ts", f'console.log("{MESSAGE}");'),
+    "Ruby": ("rb", f'puts "{MESSAGE}"'),
+    "Swift": ("swift", f'print("{MESSAGE}")'),
+    "Kotlin": ("kt", f'fun main() {{ println("{MESSAGE}") }}'),
+    "PHP": ("php", f'<?php echo "{MESSAGE}\\n"; ?>'),
+    "Perl": ("pl", f'print "{MESSAGE}\\n";'),
+    "Lua": ("lua", f'print("{MESSAGE}")'),
+    "R": ("r", f'cat("{MESSAGE}\\n")'),
+    "Julia": ("jl", f'println("{MESSAGE}")'),
+    "Haskell": ("hs", f'main = putStrLn "{MESSAGE}"'),
+    "LISP": ("lisp", f'(format t "{MESSAGE}~%")'),
+    "Scheme": ("scm", f'(display "{MESSAGE}")(newline)'),
+    "Clojure": ("clj", f'(println "{MESSAGE}")'),
+    "OCaml": ("ml", f'print_endline "{MESSAGE}"'),
+    "F#": ("fs", f'printfn "{MESSAGE}"'),
+    "Scala": ("scala", f'object Junior {{ def main(args: Array[String]) = println("{MESSAGE}") }}'),
+    "Erlang": ("erl", f'-module(junior).\n-export([main/0]).\nmain() -> io:format("{MESSAGE}~n").'),
+    "Elixir": ("exs", f'IO.puts "{MESSAGE}"'),
+    "Prolog": ("pl", f':- initialization(main).\nmain :- write("{MESSAGE}"), nl.'),
+    "Datalog": ("dl", f'/* Datalog n\'a pas d\'I/O standard, fichier déclaratif */\n% Ceci est un commentaire'),
+    "ASP": ("lp", f'% Answer Set Programming – pas d\'affichage standard'),
+    "miniKanren": ("scm", f'; miniKanren dans Scheme\n(display "{MESSAGE}")(newline)'),
+    "Mercury": ("m", f':- module junior.\n:- interface.\n:- import_module io.\n:- pred main(io::di, io::uo) is det.\n:- implementation.\nmain(!IO) :- io.write_string("{MESSAGE}\\n", !IO).'),
+    "Forth": ("fs", f'." {MESSAGE}" CR'),
+    "Assembly (x86)": ("asm", f'; NASM\nsection .data\nmsg db "{MESSAGE}",10\nlen equ $ - msg\nsection .text\nglobal _start\n_start:\n    mov eax,4\n    mov ebx,1\n    mov ecx,msg\n    mov edx,len\n    int 0x80\n    mov eax,1\n    xor ebx,ebx\n    int
