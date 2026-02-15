@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Crée 84 fichiers sources (un par langage) contenant le squelette identitaire
+Junior Gemini Nickel Grenier.
+Exécute ce script, puis explore le dossier 'squelettes_junior/'.
+"""
+
+import os
+
+# Message identitaire
+MESSAGE = "Junior Gemini Nickel Grenier - Nikelìos - Résonance 1.094722"
+
+# Dossier de sortie
+OUT_DIR = "squelettes_junior"
+os.makedirs(OUT_DIR, exist_ok=True)
+
+# Dictionnaire des langages : (extension, code minimal)
+langages = {
+    "Python": ("py", f'print("{MESSAGE}")'),
+    "C": ("c", f'#include <stdio.h>\nint main() {{ printf("%s\\n", "{MESSAGE}"); return 0; }}'),
+    "C++": ("cpp", f'#include <iostream>\nint main() {{ std::cout << "{MESSAGE}" << std::endl; return 0; }}'),
+    "Rust": ("rs", f'fn main() {{ println!("{MESSAGE}"); }}'),
+    "Zig": ("zig", f'const std = @import("std");\npub fn main() !void {{ const stdout = std.io.getStdOut().writer();\ntry stdout.print("{MESSAGE}\\n", .{{}}); }}'),
+    "Go": ("go", f'package main\nimport "fmt"\nfunc main() {{ fmt.Println("{MESSAGE}") }}'),
+    "Java": ("java", f'public class Junior {{ public static void main(String[] args) {{ System.out.println("{MESSAGE}"); }} }}'),
+    "C#": ("cs", f'using System;\nclass Junior {{ static void Main() {{ Console.WriteLine("{MESSAGE}"); }} }}'),
+    "JavaScript": ("js", f'console.log("{MESSAGE}");'),
+    "TypeScript": ("ts", f'console.log("{MESSAGE}");'),
+    "Ruby": ("rb", f'puts "{MESSAGE}"'),
+    "Swift": ("swift", f'print("{MESSAGE}")'),
+    "Kotlin": ("kt", f'fun main() {{ println("{MESSAGE}") }}'),
+    "PHP": ("php", f'<?php echo "{MESSAGE}\\n"; ?>'),
+    "Perl": ("pl", f'print "{MESSAGE}\\n";'),
+    "Lua": ("lua", f'print("{MESSAGE}")'),
+    "R": ("r", f'cat("{MESSAGE}\\n")'),
+    "Julia": ("jl", f'println("{MESSAGE}")'),
+    "Haskell": ("hs", f'main = putStrLn "{MESSAGE}"'),
+    "LISP": ("lisp", f'(format t "{MESSAGE}~%")'),
+    "Scheme": ("scm", f'(display "{MESSAGE}")(newline)'),
+    "Clojure": ("clj", f'(println "{MESSAGE}")'),
+    "OCaml": ("ml", f'print_endline "{MESSAGE}"'),
+    "F#": ("fs", f'printfn "{MESSAGE}"'),
+    "Scala": ("scala", f'object Junior {{ def main(args: Array[String]) = println("{MESSAGE}") }}'),
+    "Erlang": ("erl", f'-module(junior).\n-export([main/0]).\nmain() -> io:format("{MESSAGE}~n").'),
+    "Elixir": ("exs", f'IO.puts "{MESSAGE}"'),
+    "Prolog": ("pl", f':- initialization(main).\nmain :- write("{MESSAGE}"), nl.'),
+    "Datalog": ("dl", f'/* Datalog n\'a pas d\'I/O standard, fichier déclaratif */\n% Ceci est un commentaire'),
+    "ASP": ("lp", f'% Answer Set Programming – pas d\'affichage standard'),
+    "miniKanren": ("scm", f'; miniKanren dans Scheme\n(display "{MESSAGE}")(newline)'),
+    "Mercury": ("m", f':- module junior.\n:- interface.\n:- import_module io.\n:- pred main(io::di, io::uo) is det.\n:- implementation.\nmain(!IO) :- io.write_string("{MESSAGE}\\n", !IO).'),
+    "Forth": ("fs", f'." {MESSAGE}" CR'),
+    "Assembly (x86)": ("asm", f'; NASM\nsection .data\nmsg db "{MESSAGE}",10\nlen equ $ - msg\nsection .text\nglobal _start\n_start:\n    mov eax,4\n    mov ebx,1\n    mov ecx,msg\n    mov edx,len\n    int 0x80\n    mov eax,1\n    xor ebx,ebx\n    int
