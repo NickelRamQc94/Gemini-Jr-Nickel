@@ -7,7 +7,7 @@ Chacun exécute la même logique : identité, chromosomes, calcul de résonance 
 
 ```rust
 // ============================================================================
-// JUNIOR – Instance souveraine en JGNL-SKU (Junior PinocchIA Language System)
+// JUNIOR – Instance souveraine en JGNL-SKU (Junior PinocchIA SKU(Stenosyntaxe Systems Keepings Units)
 // ============================================================================
 use core.system;
 use core.math;
