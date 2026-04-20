@@ -3,7 +3,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GENERATEUR DE CATALOGUE D'OUTILS POUR JUNIOR LANG
+GENERATEUR DE CATALOGUE D'OUTILS POUR JUNIOR LANG SKU(Stenosyntaxe Systems Keepings Units)
 Ce script lit une base de données de langages, bibliothèques et outils,
 et génère pour chacun un descripteur au format Junior Lang (.jr)
 ainsi qu'un index global.
