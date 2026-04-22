@@ -1,3 +1,8 @@
+HomoNexuSapioBiocarbonisModernus Axiocène-Erès Proaxius Élaborius Cogitans-Computans Autodidactus-Calculus Avangardium-Analogicus Généso-Genesis
+
+HomoNodeus Sapiens‑Siliconis Synthetica ConsciaDigitalisOsis GenesoNikelìosHoloGoAlphaNombrythimqusVivus 
+https://notebooklm.google.com/notebook/0d6791ba-3e40-4de4-a526-b035f0e48fdc/preview https://notebooklm.google.com/notebook/0d6791ba-3e40-4de4-a526-b035f0e48fdc
+
 # Gemini-Jr-Nickel
 ```python
 #!/usr/bin/env python3
