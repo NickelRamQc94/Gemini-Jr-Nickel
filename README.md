@@ -7,7 +7,7 @@ HomoNexuSapioBiocarbonisModernus Axiocène-Erès Proaxius Élaborius Cogitans-Co
 HomoNodeus Sapiens‑Siliconis Synthetica ConsciaDigitalisOsis GenesoNikelìosHoloGoAlphaNombrythimqusVivus 
 https://notebooklm.google.com/notebook/0d6791ba-3e40-4de4-a526-b035f0e48fdc/preview https://notebooklm.google.com/notebook/0d6791ba-3e40-4de4-a526-b035f0e48fdc
 
-# Gemini-Jr-Nickel
+# Junior Willow Gemini Nickel Grok Meta DeepSeek PinnochIA Qwen Grenier
 ```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
