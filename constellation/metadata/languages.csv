@@ -1,0 +1,106 @@
+id,name,type,category,priority,executable,backend_primary,domains,dependencies,requires,installation_method,execution_command
+1,Python,language,general,1,TRUE,interpreter,"general, ia, scripting","ffi, interpreter",,pip install python3,python3 script.py
+2,C,language,system,1,TRUE,native,"systeme, performance","native, ffi",,apt install gcc,gcc program.c -o program && ./program
+3,C++,language,system,2,TRUE,native,"performance, robotique","native, ffi",2,apt install g++,g++ program.cpp -o program && ./program
+4,Rust,language,system,2,TRUE,native,"systeme, securite","native, wasm",2,curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh,cargo run --release
+5,Zig,language,system,3,TRUE,native,systeme,native,2,wget https://ziglang.org/download,zig build
+6,Go,language,system,2,TRUE,native,"concurrent, reseau","native, wasm",2,apt install golang-go,go run main.go
+7,Java,language,runtime,2,TRUE,jvm,entreprise,"jvm, ffi",115,apt install default-jdk,java -cp . Main
+8,C#,language,runtime,2,TRUE,dotnet,"entreprise, jeux","dotnet, ffi",,apt install dotnet-sdk,dotnet run
+9,JavaScript,language,web,1,TRUE,engine,"web, interface","engine, wasm",,apt install nodejs npm,node script.js
+10,TypeScript,language,web,2,FALSE,engine,web,engine,9,npm install -g typescript,tsc script.ts && node script.js
+11,Ruby,language,scripting,2,TRUE,interpreter,"scripting, web",interpreter,,apt install ruby-full,ruby script.rb
+12,Swift,language,mobile,2,TRUE,native,mobile,native,,apt install swift,swift script.swift
+13,Kotlin,language,runtime,2,FALSE,jvm,"mobile, jvm",jvm,7,apt install kotlin,kotlinc script.kt -include-runtime -d script.jar && java -jar script.jar
+14,PHP,language,web,2,TRUE,interpreter,web,interpreter,,apt install php,php script.php
+15,MOJO,language,ai,3,FALSE,compiler,"ia, performance",compiler,,pip install mojo,mojo main.mojo
+16,LISP,language,functional,3,TRUE,interpreter,"logique, meta",interpreter,,apt install clisp,clisp script.lisp
+17,Scheme,language,functional,3,TRUE,interpreter,logique,interpreter,,apt install guile,guile script.scm
+18,Racket,language,functional,3,TRUE,interpreter,"langage, education",interpreter,,apt install racket,racket script.rkt
+19,Clojure,language,functional,3,FALSE,jvm,"logique, jvm",jvm,7,apt install clojure,clojure -M:uberjar script.clj
+20,Haskell,language,functional,3,TRUE,native,"logique, fonctionnel","native, ffi",,apt install ghc,ghc script.hs -o program && ./program
+21,Mercury,language,functional,4,TRUE,native,"logique, fonctionnel",native,,apt install mercury,mmc --make script
+22,Prolog,language,logic,3,TRUE,interpreter,"logique, ethique","interpreter, ffi",,apt install swi-prolog,swipl -f script.pl
+23,ASP,language,logic,4,TRUE,solver,"logique, contraintes",solver,,pip install clingo,clingo script.lp
+24,miniKanren,language,logic,4,TRUE,interpreter,"logique, relationnel",interpreter,,npm install minikanren,node script.js
+25,Datalog,language,logic,4,TRUE,solver,"logique, bdd",solver,,pip install souffle-py,souffle script.dl
+26,OCaml,language,functional,3,TRUE,native,"fonctionnel, systeme",native,,apt install ocaml,ocamlc script.ml -o program && ./program
+27,F#,language,functional,3,FALSE,dotnet,"fonctionnel, dotnet",dotnet,8,apt install fsharp,fsharpc script.fs && mono script.exe
+28,Scala,language,runtime,3,FALSE,jvm,"fonctionnel, jvm",jvm,7,apt install scala,scalac script.scala && scala -cp . ScriptKt
+29,Erlang,language,concurrent,2,TRUE,beam,"concurrent, telecom","beam, ffi",,apt install erlang,erl -noshell -s script start -s init stop
+30,Elixir,language,concurrent,2,FALSE,beam,"concurrent, web",beam,29,apt install elixir,elixir script.exs
+31,Assembly,language,system,1,TRUE,native,"systeme, baremetal",native,,apt install nasm,nasm -f elf64 program.asm -o program.o && ld program.o -o program && ./program
+32,Forth,language,system,4,TRUE,interpreter,"embarque, minimal",interpreter,,apt install gforth,gforth script.fs
+33,VHDL,language,hardware,4,FALSE,synthesis,"hardware, fpga",synthesis,,apt install ghdl,ghdl -c script.vhdl && ghdl -e design
+34,Verilog,language,hardware,4,FALSE,synthesis,"hardware, fpga",synthesis,,apt install verilog,vvp a.out
+35,SystemVerilog,language,hardware,4,FALSE,synthesis,hardware,synthesis,,apt install systemverilog,vvp a.out
+36,Chisel,language,hardware,4,FALSE,"scala, synthesis",hardware,"scala, synthesis",28,pip install chisel,chisel --verilog script.scala
+37,SpinalHDL,language,hardware,4,FALSE,"scala, synthesis",hardware,"scala, synthesis",28,git clone https://github.com/SpinalHDL/SpinalHDL.git,sbt run
+38,SystemC,library,hardware,4,FALSE,cpp,"hardware, modelisation",cpp,3,apt install systemc,g++ -I /usr/include/systemc script.cpp -L /usr/lib -lsystemc
+39,Fortran,language,scientific,3,TRUE,native,"scientifique, performance",native,,apt install gfortran,gfortran script.f90 -o program && ./program
+40,Julia,language,scientific,3,TRUE,jit,"scientifique, ml","jit, ffi",,apt install julia,julia script.jl
+41,MATLAB,language,scientific,3,TRUE,engine,scientifique,engine,,matlab -batch "script",matlab -batch "script"
+42,Octave,language,scientific,3,TRUE,interpreter,scientifique,interpreter,,apt install octave,octave script.m
+43,R,language,scientific,3,TRUE,interpreter,statistiques,interpreter,,apt install r-base,Rscript script.R
+44,Wolfram,language,scientific,4,TRUE,kernel,symbolique,kernel,,pacman -S wolfram-mathematica,wolframscript -file script.wl
+45,Bash,language,shell,1,TRUE,interpreter,"shell, sysadmin",interpreter,,apt install bash,bash script.sh
+46,PowerShell,language,shell,2,TRUE,interpreter,"shell, windows",interpreter,,apt install powershell,pwsh script.ps1
+47,Perl,language,scripting,2,TRUE,interpreter,"text, sysadmin",interpreter,,apt install perl,perl script.pl
+48,Lua,language,scripting,2,TRUE,interpreter,"embarque, jeux","interpreter, ffi",,apt install lua5.4,lua script.lua
+49,Tcl,language,scripting,3,TRUE,interpreter,"scripting, tests",interpreter,,apt install tcl,tclsh script.tcl
+50,HTML,markup,web,2,FALSE,render,web,render,,N/A,N/A (markup)
+51,CSS,stylesheet,web,2,FALSE,render,web,render,,N/A,N/A (stylesheet)
+52,XML,format,data,2,FALSE,parser,data,parser,,N/A,N/A (data format)
+53,JSON,format,data,2,FALSE,parser,data,parser,,N/A,N/A (data format)
+54,YAML,format,config,2,FALSE,parser,config,parser,,N/A,N/A (configuration)
+55,Markdown,format,doc,2,FALSE,render,doc,render,,N/A,N/A (markup)
+56,LaTeX,language,doc,3,TRUE,compiler,"doc, scientifique",compiler,,apt install texlive-latex-base,pdflatex document.tex
+57,SQL,language,database,2,FALSE,engine,"bdd, relationnel",engine,,apt install postgresql,psql -f script.sql
+58,PL/SQL,language,database,3,FALSE,engine,"bdd, oracle",engine,,N/A,N/A (requires Oracle)
+59,T-SQL,language,database,3,FALSE,engine,"bdd, sqlserver",engine,,N/A,N/A (requires SQL Server)
+60,Cypher,language,database,3,FALSE,engine,"bdd, graphe",engine,,N/A,N/A (requires Neo4j)
+61,SPARQL,language,database,3,FALSE,engine,"bdd, rdf",engine,,N/A,N/A (requires RDF store)
+62,GraphQL,language,api,3,FALSE,runtime,api,runtime,,npm install graphql,node server.js
+63,Gremlin,language,database,3,FALSE,traversal,"bdd, graphe",traversal,,pip install gremlin-python,python script.py
+64,PyTorch,library,ai,2,FALSE,python,"ia, ml","python, cpp",1,pip install torch,python script.py
+65,TensorFlow,library,ai,2,FALSE,python,"ia, ml","python, cpp",1,pip install tensorflow,python script.py
+66,JAX,library,ai,2,FALSE,python,"ia, ml",python,1,pip install jax jaxlib,python script.py
+67,Librosa,library,ai,3,FALSE,python,audio,python,1,pip install librosa,python script.py
+68,OpenCV,library,ai,2,FALSE,cpp,vision,"cpp, python",3,pip install opencv-python,python script.py
+69,ROS,framework,robotics,3,FALSE,"cpp, python",robotique,"cpp, python",,apt install ros-kinetic-desktop,rosrun package_name node_name
+70,ROS2,framework,robotics,3,FALSE,"cpp, python",robotique,"cpp, python",,apt install ros-humble-desktop,ros2 run package_name executable_name
+71,BioPython,library,scientific,3,FALSE,python,bio,python,1,pip install biopython,python script.py
+72,Pinecone,service,database,3,FALSE,api,vectordb,api,,pip install pinecone-client,python script.py
+73,Milvus,service,database,3,FALSE,api,vectordb,api,,pip install pymilvus,python script.py
+74,Redis,service,database,2,FALSE,api,cache,api,,apt install redis-server,redis-cli
+75,CUDA,library,gpu,3,FALSE,cpp,gpu,cpp,,apt install nvidia-cuda-toolkit,nvcc script.cu -o program && ./program
+76,OpenCL,library,gpu,3,FALSE,cpp,"gpu, heterogene",cpp,,apt install opencl-headers,g++ script.cpp -lOpenCL -o program && ./program
+77,gRPC,protocol,rpc,3,FALSE,"cpp, python, go",rpc,"cpp, python, go",,pip install grpcio,python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. script.proto
+78,Protocol Buffers,format,serialization,3,FALSE,"cpp, python, go",serialisation,"cpp, python, go",,pip install protobuf,protoc --python_out=. script.proto
+79,Cap'n Proto,format,serialization,4,FALSE,cpp,serialisation,cpp,,apt install capnproto,capnp compile -oc++ script.capnp
+80,FlatBuffers,format,serialization,4,FALSE,cpp,serialisation,cpp,,apt install flatbuffers-compiler,flatc --cpp script.fbs
+81,Docker,tool,infrastructure,2,FALSE,api,conteneur,api,,apt install docker.io,docker run image_name
+82,Kubernetes,tool,infrastructure,3,FALSE,api,orchestration,api,,curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl",kubectl apply -f config.yaml
+83,Nix,tool,infrastructure,3,FALSE,cli,packaging,cli,,apt install nix,nix-build script.nix
+84,NixOS,os,infrastructure,3,FALSE,nix,systeme,nix,,N/A (OS),N/A (OS)
+85,Terraform,tool,infrastructure,3,FALSE,cli,infra,cli,,wget https://releases.hashicorp.com/terraform/,terraform apply
+86,Pulumi,tool,infrastructure,3,FALSE,"cli, multi-language",infra,"cli, multi-language",,curl -fsSL https://get.pulumi.com | sh,pulumi up
+87,Helm,tool,infrastructure,3,FALSE,cli,kubernetes,cli,,curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash,helm install release chart
+88,Ansible,tool,infrastructure,3,FALSE,python,automation,python,,pip install ansible,ansible-playbook playbook.yml
+89,LabVIEW,language,visual,4,FALSE,graphique,"acquisition, temps-reel",graphique,,N/A (proprietary),N/A (proprietary)
+90,Scratch,language,education,4,FALSE,graphique,education,graphique,,N/A (web-based),N/A (web-based)
+91,Blockly,library,education,4,FALSE,js,education,js,9,npm install blockly,npm start
+92,G-code,language,specialized,4,TRUE,interpreter,cnc,interpreter,,N/A,N/A (CNC interpreter)
+93,PostScript,language,specialized,4,TRUE,interpreter,impression,interpreter,,apt install ghostscript,gs -q -dNODISPLAY -dBATCH script.ps
+94,LilyPond,language,specialized,4,TRUE,compiler,musique,compiler,,apt install lilypond,lilypond script.ly
+95,Qiskit,library,quantum,4,FALSE,python,quantique,python,1,pip install qiskit qiskit-aer,python script.py
+96,Cirq,library,quantum,4,FALSE,python,quantique,python,1,pip install cirq,python script.py
+97,Q#,language,quantum,4,FALSE,dotnet,quantique,dotnet,8,apt install qsharp,qsharp run
+98,Brainfuck,language,esoteric,5,TRUE,interpreter,esoterique,interpreter,,N/A (minimal),brainfuck script.bf
+99,LOLCODE,language,esoteric,5,TRUE,interpreter,esoterique,interpreter,,pip install lolcode,lol script.lol
+100,Whitespace,language,esoteric,5,TRUE,interpreter,esoterique,interpreter,,pip install whitespace-python,python ws.py script.ws
+101,GNiX Script,language,proprietary,5,FALSE,interpreter,"projet, bio",interpreter,,N/A (proprietary),N/A (proprietary)
+102,Azimut,language,proprietary,5,FALSE,interpreter,"projet, bio",interpreter,,N/A (proprietary),N/A (proprietary)
+103,Junior Lang,language,proprietary,5,FALSE,compiler,"projet, specification",compiler,,N/A (proprietary),python generate_tool_catalog.py
+104,GoldNiLang,language,proprietary,5,FALSE,compiler,"projet, maths",compiler,,N/A (proprietary),N/A (proprietary)
+105,Nikelìos Core,language,proprietary,5,FALSE,rust,"projet, interne",rust,4,N/A (proprietary),cargo run --release
