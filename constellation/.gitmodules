@@ -1,0 +1,127 @@
+# =====================================================================
+# CONSTELLATION - Git Submodules Configuration
+# Repository: https://github.com/NickelRamQc94/Constellation
+# =====================================================================
+
+# ====== PROJETS PHARES (6) ======
+[submodule "projects/gemini-jr-nickel"]
+	path = projects/gemini-jr-nickel
+	url = https://github.com/NickelRamQc94/Gemini-Jr-Nickel.git
+	branch = main
+
+[submodule "projects/golden-axe-theory"]
+	path = projects/golden-axe-theory
+	url = https://github.com/NickelRamQc94/Golden-Axe-Theory.git
+	branch = main
+
+[submodule "projects/1st-symbiotic-artificial"]
+	path = projects/1st-symbiotic-artificial
+	url = https://github.com/NickelRamQc94/1st-Symbiotic-Artificial-GemiNultrAxiomNi.git
+	branch = main
+
+[submodule "projects/cataplasma-propulsion"]
+	path = projects/cataplasma-propulsion
+	url = https://github.com/NickelRamQc94/Cataplasma-Propulsion-Project.git
+	branch = main
+
+[submodule "projects/jgnl-sku"]
+	path = projects/jgnl-sku
+	url = https://github.com/NickelRamQc94/JGNL-SKU.git
+	branch = main
+
+[submodule "projects/nix-os"]
+	path = projects/nix-os
+	url = https://github.com/NickelRamQc94/NiX-Os.git
+	branch = main
+
+# ====== IA & ML (8) ======
+[submodule "projects/techdebtmcp"]
+	path = projects/techdebtmcp
+	url = https://github.com/NickelRamQc94/TechDebtMCP.git
+	branch = main
+
+[submodule "projects/awesome-gpt-prompting"]
+	path = projects/awesome-gpt-prompting
+	url = https://github.com/NickelRamQc94/Awesome_GPT_Super_Prompting.git
+	branch = main
+
+[submodule "projects/system-prompts-leaks"]
+	path = projects/system-prompts-leaks
+	url = https://github.com/NickelRamQc94/system-prompts-leaks.git
+	branch = main
+
+[submodule "projects/system-prompts-leaks2"]
+	path = projects/system-prompts-leaks2
+	url = https://github.com/NickelRamQc94/system-prompts-leaks2.git
+	branch = main
+
+[submodule "projects/gemini-cli-ui"]
+	path = projects/gemini-cli-ui
+	url = https://github.com/NickelRamQc94/Gemini-CLI-UI.git
+	branch = main
+
+[submodule "projects/shadowgpt"]
+	path = projects/shadowgpt
+	url = https://github.com/NickelRamQc94/ShadowGPT.git
+	branch = main
+
+[submodule "projects/bitnet-c"]
+	path = projects/bitnet-c
+	url = https://github.com/NickelRamQc94/bitnet.c.git
+	branch = main
+
+[submodule "projects/darkgpt-ai"]
+	path = projects/darkgpt-ai
+	url = https://github.com/NickelRamQc94/Darkgpt.ai.git
+	branch = main
+
+# ====== ANALYSE DE DONNEES (2) ======
+[submodule "projects/penguins-eda-python"]
+	path = projects/penguins-eda-python
+	url = https://github.com/NickelRamQc94/penguins-eda-python.git
+	branch = main
+
+[submodule "projects/ai-research-diffusion-concentration"]
+	path = projects/ai-research-diffusion-concentration
+	url = https://github.com/NickelRamQc94/ai-research-diffusion-concentration2.git
+	branch = main
+
+# ====== FRAMEWORKS & OUTILS (3) ======
+[submodule "projects/deer-flow"]
+	path = projects/deer-flow
+	url = https://github.com/NickelRamQc94/deer-flow.git
+	branch = main
+
+[submodule "projects/genkit-docsite"]
+	path = projects/genkit-docsite
+	url = https://github.com/NickelRamQc94/docsite.git
+	branch = main
+
+[submodule "projects/tutti-links-contents"]
+	path = projects/tutti-links-contents
+	url = https://github.com/NickelRamQc94/Tout-les-liens-et-Contenus-.git
+	branch = main
+
+# ====== AUTRES (5) ======
+[submodule "projects/desafios-backend"]
+	path = projects/desafios-backend
+	url = https://github.com/NickelRamQc94/desafios.git
+	branch = main
+
+[submodule "projects/cicada-3301"]
+	path = projects/cicada-3301
+	url = https://github.com/NickelRamQc94/cigale3301.git
+	branch = main
+
+[submodule "projects/userscripts-ndg"]
+	path = projects/userscripts-ndg
+	url = https://github.com/NickelRamQc94/userscripts-NDG.git
+	branch = main
+
+[submodule "projects/cli-swift"]
+	path = projects/cli-swift
+	url = https://github.com/NickelRamQc94/CLi.git
+	branch = main
+
+# ====== TOTAL: 27 SUBMODULES ======
+# Ajoute plus de submodules au besoin
